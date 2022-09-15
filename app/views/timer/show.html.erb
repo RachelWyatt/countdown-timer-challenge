@@ -21,15 +21,17 @@
 	
 	<!-- Footer -->
 	<footer>
-        <%= link_to 'www.facebook.com' do %>
-            <%= image_tag('icon-facebook.svg')%>
+        <div class="center-align footer-vertical-align">
+            <%= link_to 'www.facebook.com', class: "social-icon" do %>
+                <%= image_tag('icon-facebook.svg', alt: "Facebook")%>
         <% end %>
-        <%= link_to 'www.instagram.com' do %>
-            <%= image_tag('icon-instagram.svg')%>
+            <%= link_to 'www.instagram.com', class: "social-icon" do %>
+                <%= image_tag('icon-instagram.svg', alt: "Instagram")%>
         <% end %>
-        <%= link_to 'www.pinterest.com' do %>
-            <%= image_tag('icon-pinterest.svg')%>
+            <%= link_to 'www.pinterest.com', class: "social-icon" do %>
+                <%= image_tag('icon-pinterest.svg', alt: "Pinterest") %>
         <% end %>
+        </div>
     </footer>
 
 </body>
