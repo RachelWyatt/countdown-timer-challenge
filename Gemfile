@@ -34,8 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # Materialize for styling
 gem 'materialize-sass'
 
-# For formatting dates
-gem 'momentjs-rails'
+gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
