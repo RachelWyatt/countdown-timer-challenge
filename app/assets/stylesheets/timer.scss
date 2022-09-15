@@ -12,6 +12,11 @@ h1 {
     padding: 10px;
 }
 
+img:hover {
+    filter: invert(60%) sepia(47%) saturate(4874%) hue-rotate(312deg)
+    brightness(103%) contrast(97%);
+}
+
 footer {
     background-image: url(pattern-hills.svg);
     background-size: cover;
