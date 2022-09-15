@@ -1,1 +1,37 @@
-I'm the timer show page.
+<%= stylesheet_link_tag 'timer.css' %>
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
+	<title>Countdown Timer</title>
+</head>
+
+<body>
+	
+	<!-- Header -->
+	<header>
+        <h1>WE'RE LAUNCHING SOON!</h1>
+    </header>
+
+	
+	<!-- Body -->
+	<main class = "body">
+
+	</main>
+	
+	<!-- Footer -->
+	<footer>
+        <%= link_to 'www.facebook.com' do %>
+            <%= image_tag('icon-facebook.svg')%>
+        <% end %>
+        <%= link_to 'www.instagram.com' do %>
+            <%= image_tag('icon-instagram.svg')%>
+        <% end %>
+        <%= link_to 'www.pinterest.com' do %>
+            <%= image_tag('icon-pinterest.svg')%>
+        <% end %>
+    </footer>
+
+</body>
+
+</html>

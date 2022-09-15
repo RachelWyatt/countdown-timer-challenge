@@ -1,0 +1,9 @@
+body {
+    background-color: hsl(236, 21%, 26%);
+}
+
+h1 {
+    font-size: 14;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+}
