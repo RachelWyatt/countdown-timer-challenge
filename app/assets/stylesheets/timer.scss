@@ -24,7 +24,7 @@ body {
 }
 
 h1 {
-    font-size: 14px;
+    font-size: 4em;
     color: white;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -84,12 +84,11 @@ h1 {
     left: 1.1vw;
     width: 17vw;
     height: 200%;
-    background: hsl(236, 21%, 26%);
     border-radius: 10px;
   }
 
   .counter-card {
-    font-size: 4em;
+    font-size: 6em;
     color: #fb6087;
   }
 
@@ -110,11 +109,13 @@ h1 {
     align-items: flex-end;
     top: 0;
     background-size: 100% 100%;
-    color: rgba(251, 96, 135, 0.9);
+    color: hsl(345, 95%, 68%);
     transform-origin: center bottom;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     z-index: 3;
+    background-color: hsl(236, 21%, 26%);
+    border-radius: 15px;
   }
 
   .counter-card.top::after {
@@ -122,14 +123,19 @@ h1 {
     top: 100%;
     background-size: 100% 100%;
     z-index: 1;
+    background-color: hsl(237, 18%, 59%);
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px black;
   }
 
   .counter-card.bottom::before {
     bottom: 0;
     align-items: flex-end;
     background-size: 100% 100%;
-    color: rgba(251, 96, 135, 0.9);
+    color: hsl(345, 95%, 68%);
     z-index: 1;
+    background-color: hsl(237, 18%, 59%);
+    border-radius: 15px;
   }
 
   .counter-card.bottom::after {
@@ -141,6 +147,8 @@ h1 {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     z-index: 2;
+    background-color: hsl(236, 21%, 26%);
+    border-radius: 15px;
   }
 
 /* Footer Styles */
@@ -184,6 +192,7 @@ footer {
 
     .counter-span {
         max-width: 80px
+
     }
 
     .counter-card {
