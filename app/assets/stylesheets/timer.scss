@@ -178,17 +178,16 @@ footer {
     .countdown-wrapper {
         max-width: 365px;
         margin: auto;
-        display: grid;
+        display: flex;
         gap: 1rem;
     }
 
-    .countdown-card {
+    .counter-span {
         max-width: 80px
     }
 
-    .countdown-card > div {
-        font-size: 2rem;
-        letter-spacing: 0.5rem;
+    .counter-card {
+        font-size: 2em;
     }
 
     .counter {
@@ -196,7 +195,13 @@ footer {
     }
 
     .caption {
-        transform: translate(-10%, -100%);
+        transform: translate(20%, 0%);
+        max-width: 50px;
+        font-size: .5em;
     }
 
-}
+    .timer {
+        max-width: 50px;
+    }
+
+    }
