@@ -1,101 +1,80 @@
-<%= stylesheet_link_tag 'timer.css' %>
 <!DOCTYPE html>
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
-	<title>Countdown Timer</title>
+		<%= stylesheet_link_tag 'timer.css' %>
+		<title>Countdown Timer</title>
 </head>
 
 <body>
 	
 	<!-- Header -->
-	<header>
-        <h1>WE'RE LAUNCHING SOON!</h1>
+	<div class="container">
+		<header>
+        <h1 class="center-align">WE'RE LAUNCHING SOON</h1>
     </header>
 
-	
 	<!-- Body -->
-	<main>
+
+		<main>
 		<div class="countdown-wrapper">
+			<div class="timer">
+				<div class="counter" data-timer-card="days">
+				<span class="counter-span"></span>
+					<div class="counter-card top" id="days-top" data-timer-front="00"></div>
+					<div class="counter-card bottom" id="days-bottom" data-timer-back="00"></div>
+					<span class="caption">Days</span>
+				</div>
+			</div>
 
-			<div class="countdown-card">
-				<div class="counter">
-					<div id="days"></div>
-					<div class="divider"></div>
+			<div class="timer">
+				<div class="counter" data-timer-card="hours">
+				<span class="counter-span"></span>
+					<div class="counter-card top" id="hours-top" data-timer-front="00"></div>
+					<div class="counter-card bottom" id="hours-bottom" data-timer-back="00"></div>
+					<span class="caption">Hours</span>
 				</div>
-				<p class="caption">Days</p>
 			</div>
-			
 
-			<div class="countdown-card">
-				<div class="counter">
-					<div id="hours"></div>
-					<div class="divider"></div>
+			<div class="timer">
+				<div class="counter" data-timer-card="minutes">
+				<span class="counter-span"></span>
+					<div class="counter-card top" id="minutes-top" data-timer-front="00"></div>
+					<div class="counter-card bottom" id="minutes-bottom" data-timer-back="00"></div>
+					<span class="caption">Minutes</span>
 				</div>
-				<p class="caption">Hours</p>
 			</div>
-			
 
-			<div class="countdown-card">
-				<div class="counter">
-					<div id="minutes"></div>
-					<div class="divider"></div>
+			<div class="timer">
+				<div class="counter" data-timer-card="seconds">
+				<span class="counter-span"></span>
+					<div class="counter-card top" id="seconds-top" data-timer-front="00"></div>
+					<div class="counter-card bottom" id="seconds-bottom" data-timer-back="00"></div>
+					<span class="caption">Seconds</span>
 				</div>
-				<p class="caption">Minutes</p>
 			</div>
-			
-			<div class="countdown-card">
-				<div class="counter">
-					<div id="seconds"></div>
-					<div class="divider"></div>
-				</div>
-				<p class="caption">Seconds</p>
-			</div>
-			
-		</div>
+
+	</div>
 	</main>
+
 	
 	<!-- Footer -->
 	<footer>
       <div class="social-icons">
-            <%= link_to 'www.facebook.com', class: "social-icon" do %>
-                <%= image_tag('icon-facebook.svg', alt: "Facebook")%>
-        <% end %>
-            <%= link_to 'www.instagram.com', class: "social-icon" do %>
-                <%= image_tag('icon-instagram.svg', alt: "Instagram")%>
-        <% end %>
-            <%= link_to 'www.pinterest.com', class: "social-icon" do %>
-                <%= image_tag('icon-pinterest.svg', alt: "Pinterest") %>
-        <% end %>
-        </div>
-    </footer>
+          <%= link_to 'www.facebook.com', class: "social-icon" do %>
+              <%= image_tag('icon-facebook.svg', alt: "Facebook")%>
+          <% end %>
+          <%= link_to 'www.instagram.com', class: "social-icon" do %>
+              <%= image_tag('icon-instagram.svg', alt: "Instagram")%>
+          <% end %>
+          <%= link_to 'www.pinterest.com', class: "social-icon" do %>
+              <%= image_tag('icon-pinterest.svg', alt: "Pinterest") %>
+          <% end %>
+      </div>
+  </footer>
+	</div>
 
 </body>
-<script>
-  window.onload = setDeadline()
-  window.onload = setInterval(countdown, 1000)
 
-  function setDeadline () {
-    var currentTime = new Date();
-     deadline = currentTime.setDate(currentTime.getDate() + 14);
-  }
-
-  function countdown () {
-      var now = new Date()
-      var remaining_time = deadline - now;
-
-      if (remaining_time > 0) {
-          var days = Math.floor((remaining_time / (1000 * 60 * 60 * 24)));
-          var hours = Math.floor((remaining_time / (1000 * 60 * 60)) % 24);
-          var minutes = Math.floor((remaining_time / 1000 / 60) % 60);
-          var seconds = Math.floor((remaining_time / 1000) % 60);
-      }
-
-      document.getElementById("days").innerHTML = days;
-      document.getElementById("hours").innerHTML = hours;
-      document.getElementById("minutes").innerHTML = minutes;
-      document.getElementById("seconds").innerHTML = seconds;
-  }
-  
-</script>
+<%= javascript_include_tag('timer.js') %>
 </html>

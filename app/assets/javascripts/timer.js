@@ -1,4 +1,3 @@
-window.onload = console.log("I'm here")
 window.onload = setDeadline()
 window.onload = setInterval(countdown, 1000)
 
@@ -18,9 +17,12 @@ function countdown () {
     var seconds = Math.floor((remaining_time / 1000) % 60);
   }
 
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
+  document.getElementById("days-top").attributes[2].nodeValue = days;
+  document.getElementById("days-bottom").attributes[2].nodeValue = days;
+  document.getElementById("hours-top").attributes[2].nodeValue = hours;
+  document.getElementById("hours-bottom").attributes[2].nodeValue = hours;
+  document.getElementById("minutes-top").attributes[2].nodeValue = minutes;
+  document.getElementById("minutes-bottom").attributes[2].nodeValue = minutes;
+  document.getElementById("seconds-top").attributes[2].nodeValue = seconds;
+  document.getElementById("seconds-bottom").attributes[2].nodeValue = seconds;
 }
- 

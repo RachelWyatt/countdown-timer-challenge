@@ -34,59 +34,114 @@ h1 {
 /* Countdown Styles */
 
 .countdown-wrapper {
-    max-width: 75rem;
-    margin: auto;
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5rem;
-    align-content: center;
-}
-
-.countdown-card {
     display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
+    gap: 10px;
+    height: 200px;
+    margin-top: 106px;
 }
 
-.counter {
-    max-width: 15rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    text-align: center;
-    border-radius: .25rem;
-    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 1);
-    position: relative;
-    background-color: hsl(237, 18%, 59%);
+.countdown-wrapper div {
+    margin: 10px;
 }
 
-// Countdown Numbers
-.countdown-card > div {
-    font-size: 4rem;
-    color: hsl(345, 95%, 68%);
-    text-transform: uppercase;
+.countdown-wrapper h3 {
+    color:hsl(345, 95%, 68%);
     letter-spacing: 0.7rem;
-    font-family: "Red Hat Text", sans-serif;
+    align-items: center;
 }
 
 .caption {
-    color: hsl(237, 18%, 59%);
-    font-family: "Red Hat Text", sans-serif;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 238%;
+    width: 100%;
+    color: white;
     font-size: 14px;
-    top: 0%;
-    left: 50%;
-    transform: translate(40%, 0%);
-    text-transform: capitalize;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.divider {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    height: 2px;
-    background-color: rgba(0, 0, 0, 0.15);
+.countdown-card {
+    font-size: 0.7rem;
+    letter-spacing: 0.3rem;
+    color: hsl(0, 0%, 57%);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.15);
 }
+
+.counter {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 19.2vw;
+    height: 8vw;
+    perspective: 200px;
+  }
+
+  .counter-span {
+    position: absolute;
+    top: 5px;
+    left: 1.1vw;
+    width: 17vw;
+    height: 200%;
+    background: hsl(236, 21%, 26%);
+    border-radius: 10px;
+  }
+
+  .counter-card {
+    font-size: 4em;
+    color: #fb6087;
+  }
+
+  .counter-card::before, .counter-card::after {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    content: attr(data-timer-back);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+    overflow: hidden;
+  }
+
+  .counter-card.top::before {
+    content: attr(data-timer-front);
+    align-items: flex-end;
+    top: 0;
+    background-size: 100% 100%;
+    color: rgba(251, 96, 135, 0.9);
+    transform-origin: center bottom;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    z-index: 3;
+  }
+
+  .counter-card.top::after {
+    content: attr(data-timer-front);
+    top: 100%;
+    background-size: 100% 100%;
+    z-index: 1;
+  }
+
+  .counter-card.bottom::before {
+    bottom: 0;
+    align-items: flex-end;
+    background-size: 100% 100%;
+    color: rgba(251, 96, 135, 0.9);
+    z-index: 1;
+  }
+
+  .counter-card.bottom::after {
+    top: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transform-origin: top center;
+    transform: rotateX(0.5turn);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    z-index: 2;
+  }
 
 /* Footer Styles */
 .social-icon {
