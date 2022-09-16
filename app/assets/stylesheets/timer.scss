@@ -90,4 +90,35 @@ footer {
     height: 23vh;
     background-size: cover;
 }
+
+@media (max-width: 500px) {
+
+    footer {
+        width: 150%;
+    }
+
+    .countdown-wrapper {
+        max-width: 365px;
+        margin: auto;
+        display: grid;
+        gap: 1rem;
+    }
+
+    .countdown-card {
+        max-width: 80px
+    }
+
+    .countdown-card > div {
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+    }
+
+    .counter {
+        max-width: 50px
+    }
+
+    .caption {
+        transform: translate(-10%, -100%);
+    }
+
 }
