@@ -4,8 +4,13 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+
 body {
     background-image: url('bg-stars.svg');
+    background-color: hsl(234, 17%, 12%);
+    font-family: 'Red Hat Text', sans-serif;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -13,6 +18,9 @@ body {
     align-items: center;
     min-height: 70vh;
 }
+
+.img {
+    max-width: 100%
 }
 
 h1 {
