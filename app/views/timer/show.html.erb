@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
+		<%= stylesheet_link_tag 'timer.css' %>
+		<title>Countdown Timer</title>
+</head>
+
+<body>
+	
+	<!-- Header -->
+	<div class="container">
+		<header>
+        <h1 class="center-align">WE'RE LAUNCHING SOON</h1>
+    </header>
+
+	<!-- Body -->
+
+		<main>
+		<div class="countdown-wrapper">
+			<div class="timer">
+				<div class="counter" data-timer-card="days">
+				<span class="counter-span"></span>
+					<div class="counter-card top" id="days-top" data-timer-front="00"></div>
+					<div class="counter-card bottom" id="days-bottom" data-timer-back="00"></div>
+					<span class="caption">Days</span>
+				</div>
+			</div>
+
+			<div class="timer">
+				<div class="counter" data-timer-card="hours">
+				<span class="counter-span"></span>
+					<div class="counter-card top" id="hours-top" data-timer-front="00"></div>
+					<div class="counter-card bottom" id="hours-bottom" data-timer-back="00"></div>
+					<span class="caption">Hours</span>
+				</div>
+			</div>
+
+			<div class="timer">
+				<div class="counter" data-timer-card="minutes">
+				<span class="counter-span"></span>
+					<div class="counter-card top" id="minutes-top" data-timer-front="00"></div>
+					<div class="counter-card bottom" id="minutes-bottom" data-timer-back="00"></div>
+					<span class="caption">Minutes</span>
+				</div>
+			</div>
+
+			<div class="timer">
+				<div class="counter" data-timer-card="seconds">
+				<span class="counter-span"></span>
+					<div class="counter-card top" id="seconds-top" data-timer-front="00"></div>
+					<div class="counter-card bottom" id="seconds-bottom" data-timer-back="00"></div>
+					<span class="caption">Seconds</span>
+				</div>
+			</div>
+
+	</div>
+	</main>
+
+	
+	<!-- Footer -->
+	<footer>
+      <div class="social-icons">
+          <%= link_to 'www.facebook.com', class: "social-icon" do %>
+              <%= image_tag('icon-facebook.svg', alt: "Facebook")%>
+          <% end %>
+          <%= link_to 'www.instagram.com', class: "social-icon" do %>
+              <%= image_tag('icon-instagram.svg', alt: "Instagram")%>
+          <% end %>
+          <%= link_to 'www.pinterest.com', class: "social-icon" do %>
+              <%= image_tag('icon-pinterest.svg', alt: "Pinterest") %>
+          <% end %>
+      </div>
+  </footer>
+	</div>
+
+</body>
+
+<%= javascript_include_tag('timer.js') %>
+</html>

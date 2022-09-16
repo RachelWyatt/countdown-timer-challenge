@@ -1,0 +1,216 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-image: url('bg-stars.svg');
+    background-color: hsl(234, 17%, 12%);
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.img {
+    max-width: 100%
+}
+
+h1 {
+    font-size: 4em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+/* Countdown Styles */
+
+.countdown-wrapper {
+    display: flex;
+    gap: 10px;
+    height: 200px;
+    margin-top: 106px;
+}
+
+.countdown-wrapper div {
+    margin: 10px;
+}
+
+.countdown-wrapper h3 {
+    color:hsl(345, 95%, 68%);
+    letter-spacing: 0.7rem;
+    align-items: center;
+}
+
+.caption {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 238%;
+    width: 100%;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.countdown-card {
+    font-size: 0.7rem;
+    letter-spacing: 0.3rem;
+    color: hsl(0, 0%, 57%);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.counter {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 19.2vw;
+    height: 8vw;
+    perspective: 200px;
+  }
+
+  .counter-span {
+    position: absolute;
+    top: 5px;
+    left: 1.1vw;
+    width: 17vw;
+    height: 200%;
+    border-radius: 10px;
+  }
+
+  .counter-card {
+    font-size: 6em;
+    color: #fb6087;
+  }
+
+  .counter-card::before, .counter-card::after {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    content: attr(data-timer-back);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+    overflow: hidden;
+  }
+
+  .counter-card.top::before {
+    content: attr(data-timer-front);
+    align-items: flex-end;
+    top: 0;
+    background-size: 100% 100%;
+    color: hsl(345, 95%, 68%);
+    transform-origin: center bottom;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    z-index: 3;
+    background-color: hsl(236, 21%, 26%);
+    border-radius: 15px;
+  }
+
+  .counter-card.top::after {
+    content: attr(data-timer-front);
+    top: 100%;
+    background-size: 100% 100%;
+    z-index: 1;
+    background-color: hsl(237, 18%, 59%);
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px black;
+  }
+
+  .counter-card.bottom::before {
+    bottom: 0;
+    align-items: flex-end;
+    background-size: 100% 100%;
+    color: hsl(345, 95%, 68%);
+    z-index: 1;
+    background-color: hsl(237, 18%, 59%);
+    border-radius: 15px;
+  }
+
+  .counter-card.bottom::after {
+    top: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transform-origin: top center;
+    transform: rotateX(0.5turn);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    z-index: 2;
+    background-color: hsl(236, 21%, 26%);
+    border-radius: 15px;
+  }
+
+/* Footer Styles */
+.social-icon {
+    padding: 10px;
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+img:hover {
+    filter: invert(60%) sepia(47%) saturate(4874%) hue-rotate(312deg)
+    brightness(103%) contrast(97%);
+}
+
+footer {
+    background-image: url(pattern-hills.svg);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 23vh;
+    background-size: cover;
+}
+
+@media (max-width: 500px) {
+
+    footer {
+        width: 150%;
+    }
+
+    .countdown-wrapper {
+        max-width: 365px;
+        margin: auto;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .counter-span {
+        max-width: 80px
+
+    }
+
+    .counter-card {
+        font-size: 2em;
+    }
+
+    .counter {
+        max-width: 50px
+    }
+
+    .caption {
+        transform: translate(20%, 0%);
+        max-width: 50px;
+        font-size: .5em;
+    }
+
+    .timer {
+        max-width: 50px;
+    }
+
+    }
